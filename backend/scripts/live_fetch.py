@@ -11,7 +11,7 @@ import pandas as pd
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 # Import API keys from config
-from backend.config import Config
+from config import Config
 
 # Set timezone for Tokyo & UTC
 TOKYO_TZ = pytz.timezone("Asia/Tokyo")
@@ -154,7 +154,7 @@ def fetch_forecast_weather(latitude, longitude):
 def fetch_all_data():
     """Fetch NO₂ and weather data for all stations."""
     try:
-        with open("backend/data/no2_sensors.json", "r", encoding="utf-8") as file:
+        with open("data/no2_sensors.json", "r", encoding="utf-8") as file:
             sensors_data = json.load(file)
     except FileNotFoundError:
         print("❌ Error: 'no2_sensors.json' file not found.")
@@ -235,8 +235,8 @@ def fetch_all_data():
     df = pd.DataFrame(data_records)
 
     # Save DataFrame
-    df.to_csv("backend/data/live_no2_weather_data.csv", index=False)
-    print("✅ Data saved to backend/data/live_no2_weather_data.csv")
+    df.to_csv("data/live_no2_weather_data.csv", index=False)
+    print("data/live_no2_weather_data.csv")
 
 
 if __name__ == "__main__":

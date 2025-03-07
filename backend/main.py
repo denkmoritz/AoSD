@@ -2,7 +2,6 @@ from fastapi import FastAPI, HTTPException, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
 import joblib
-import os
 import keras
 import datetime
 import pytz
@@ -10,9 +9,14 @@ import time
 import threading
 import geopandas as gpd
 from shapely.geometry import Point
+import sys
+import os
 
-from backend.scripts.kriging import load_tokyo_special_wards, perform_all_kriging
-from backend.scripts.live_fetch import fetch_all_data
+# ✅ Ensure the `backend/` folder is in the Python path
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+from scripts.kriging import load_tokyo_special_wards, perform_all_kriging
+from scripts.live_fetch import fetch_all_data
 
 # ✅ Define Paths
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # Get the backend base directory
@@ -20,12 +24,18 @@ DATA_DIR = os.path.join(BASE_DIR, "data")
 MODEL_DIR = os.path.join(BASE_DIR, "models")
 LIVE_DATA_PATH = os.path.join(DATA_DIR, "live_no2_weather_data.csv")
 
+
 app = FastAPI()
 
-# ✅ Allow CORS for frontend requests
+origins = [
+    "http://localhost:3000",
+    "http://frontend:3000",
+    "http://127.0.0.1:3000",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=origins,  # Don't use "*" if allow_credentials=True
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

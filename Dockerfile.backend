@@ -1,0 +1,26 @@
+# Use Python 3.11 as the base image
+FROM python:3.11
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy requirements file
+COPY requirements.txt .
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# ✅ Copy the entire backend directory (including `data/`)
+COPY backend /app/backend
+
+# ✅ Ensure data directory is copied
+COPY backend/data /app/backend/data
+
+# ✅ Set PYTHONPATH so backend is correctly found
+ENV PYTHONPATH="/app/backend"
+
+# Expose FastAPI port
+EXPOSE 8000
+
+# ✅ Start FastAPI with the correct module path
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]

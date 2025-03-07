@@ -1,0 +1,40 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app/backend  # ✅ Ensures backend files are correctly mapped
+      - ./backend/data:/app/backend/data  # ✅ Persist `data/` directory
+    environment:
+      - ENV=development
+      - HOST=0.0.0.0
+      - PYTHONPATH=/app/backend
+    restart: unless-stopped
+    networks:
+      - aosd_network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    env_file:
+      - ./frontend/.env.local
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - aosd_network
+
+networks:
+  aosd_network:
+    driver: bridge

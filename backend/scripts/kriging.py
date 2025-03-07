@@ -4,6 +4,11 @@ import geopandas as gpd
 from shapely.geometry import Point
 from pykrige.ok import OrdinaryKriging
 from pyproj import Transformer
+import sys
+import os
+
+# ✅ Ensure the `backend/` folder is in the Python path
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 # ✅ Define CRS
 UTM_ZONE = "EPSG:32654"  # Tokyo UTM Zone
@@ -19,7 +24,7 @@ def transform_utm_to_geographic(points):
 
 
 # ✅ Load Tokyo boundary data in UTM
-def load_tokyo_special_wards(filepath="backend/data/tokyo_special_ward_topo.json"):
+def load_tokyo_special_wards(filepath="data/tokyo_special_ward_topo.json"):
     special_wards_gdf = gpd.read_file(filepath)
     if special_wards_gdf.crs is None:
         special_wards_gdf.set_crs(epsg=4326, inplace=True)
@@ -27,7 +32,7 @@ def load_tokyo_special_wards(filepath="backend/data/tokyo_special_ward_topo.json
 
 
 # ✅ Load live NO₂ predictions in UTM
-def load_live_predictions(filepath="backend/data/live_predictions.csv"):
+def load_live_predictions(filepath="data/live_predictions.csv"):
     df = pd.read_csv(filepath)
     gdf = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df.longitude, df.latitude), crs=GEOGRAPHIC_CRS)
     return gdf.to_crs(UTM_ZONE)  # ✅ Convert to UTM only once

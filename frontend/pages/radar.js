@@ -78,7 +78,9 @@ const PollutionRadar = () => {
     const fetchLiveData = async () => {
         try {
             console.log("🔄 Fetching Live NO₂ Data...");
-            const response = await axios.get("http://localhost:8000/pollution/live");
+            const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+            const response = await axios.get(`${apiUrl}/pollution/live`);
+
 
             if (response.data.status === "processing") {
                 console.warn("⚠ Data is still processing. Try again later.");
@@ -89,7 +91,7 @@ const PollutionRadar = () => {
             const newTimestamps = Object.keys(response.data);
             setTimestamps(newTimestamps);
 
-            const timestampsResponse = await axios.get("http://localhost:8000/pollution/timestamps");
+            const timestampsResponse = await axios.get(`${apiUrl}/pollution/timestamps`);
             if (timestampsResponse.data.timestamps) {
                 setFormattedTimestamps(timestampsResponse.data.timestamps);
             }
