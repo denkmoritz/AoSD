@@ -1,0 +1,794 @@
+[
+    {
+        "station_id": 1214508,
+        "station_name": "\u4e16\u7530\u8c37\u533a\u6210\u57ce\uff19\uff0d\uff12\uff15\uff0d\uff11",
+        "coordinates": {
+            "latitude": 35.651389,
+            "longitude": 139.593611
+        },
+        "no2_sensor": {
+            "sensor_id": 6518570,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1214509,
+        "station_name": "\u4e16\u7530\u8c37\u533a\u7c95\u8c37\uff12\uff0d\uff11\uff19",
+        "coordinates": {
+            "latitude": 35.661111,
+            "longitude": 139.616667
+        },
+        "no2_sensor": {
+            "sensor_id": 6587263,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1214510,
+        "station_name": "\u4e2d\u592e\u533a\u65b0\u5ddd\u4e00\u4e01\u76ee\uff13\u756a\uff11\u53f7",
+        "coordinates": {
+            "latitude": 35.675,
+            "longitude": 139.786111
+        },
+        "no2_sensor": {
+            "sensor_id": 6516563,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1214511,
+        "station_name": "\u4e2d\u592e\u533a\u6674\u6d77\u4e09\u4e01\u76ee\uff16\u756a\uff11\u53f7",
+        "coordinates": {
+            "latitude": 35.652778,
+            "longitude": 139.783333
+        },
+        "no2_sensor": {
+            "sensor_id": 6516111,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1214514,
+        "station_name": "\u4e2d\u91ce\u533a\u4e2d\u592e2-18-21",
+        "coordinates": {
+            "latitude": 35.700278,
+            "longitude": 139.682778
+        },
+        "no2_sensor": {
+            "sensor_id": 6518645,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1214515,
+        "station_name": "\u4e2d\u91ce\u533a\u82e5\u5bae\u4e09\u4e01\u76ee53\u756a",
+        "coordinates": {
+            "latitude": 35.716667,
+            "longitude": 139.647222
+        },
+        "no2_sensor": {
+            "sensor_id": 6515352,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1214712,
+        "station_name": "\u5317\u533a\u738b\u5b50\uff15\u4e01\u76ee\uff12\uff19\u756a",
+        "coordinates": {
+            "latitude": 35.763889,
+            "longitude": 139.738889
+        },
+        "no2_sensor": {
+            "sensor_id": 6587151,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1214720,
+        "station_name": "\u5343\u4ee3\u7530\u533a\u971e\u304c\u95a2\uff11\uff0d\uff12\uff0d\uff12",
+        "coordinates": {
+            "latitude": 35.669444,
+            "longitude": 139.756389
+        },
+        "no2_sensor": {
+            "sensor_id": 6516136,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1214721,
+        "station_name": "\u5343\u4ee3\u7530\u533a\u65e5\u6bd4\u8c37\u516c\u5712",
+        "coordinates": {
+            "latitude": 35.672222,
+            "longitude": 139.761111
+        },
+        "no2_sensor": {
+            "sensor_id": 6515676,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1214722,
+        "station_name": "\u5343\u4ee3\u7530\u533a\u795e\u7530\u53f8\u753a\uff12\u4e01\u76ee\uff12\u756a\u5730",
+        "coordinates": {
+            "latitude": 35.688889,
+            "longitude": 139.772222
+        },
+        "no2_sensor": {
+            "sensor_id": 6515455,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1214767,
+        "station_name": "\u53f0\u6771\u533a\u4e09\u30ce\u8f2a\uff12\uff0d\uff15\u5730\u5148",
+        "coordinates": {
+            "latitude": 35.725,
+            "longitude": 139.797222
+        },
+        "no2_sensor": {
+            "sensor_id": 6520102,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1214831,
+        "station_name": "\u54c1\u5ddd\u533a\u5317\u54c1\u5ddd\uff13\uff0d\uff11\uff11\uff0d\uff12\uff12",
+        "coordinates": {
+            "latitude": 35.613889,
+            "longitude": 139.744444
+        },
+        "no2_sensor": {
+            "sensor_id": 6519787,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1214832,
+        "station_name": "\u54c1\u5ddd\u533a\u897f\u4e94\u53cd\u7530\uff17\uff0d\uff12\uff15\uff0d\uff11",
+        "coordinates": {
+            "latitude": 35.616667,
+            "longitude": 139.722222
+        },
+        "no2_sensor": {
+            "sensor_id": 6519019,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1214833,
+        "station_name": "\u54c1\u5ddd\u533a\u8c4a\u753a\uff12\uff0d\uff11\uff0d\uff12\uff10",
+        "coordinates": {
+            "latitude": 35.608333,
+            "longitude": 139.725
+        },
+        "no2_sensor": {
+            "sensor_id": 6518521,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1214884,
+        "station_name": "\u58a8\u7530\u533a\u6771\u5411\u5cf6\uff11\uff0d\uff13\uff14",
+        "coordinates": {
+            "latitude": 35.716667,
+            "longitude": 139.816667
+        },
+        "no2_sensor": {
+            "sensor_id": 6517597,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1214929,
+        "station_name": "\u5927\u7530\u533a\u4e2d\u99ac\u8fbc\uff12\uff0d\uff11\uff17\u5148",
+        "coordinates": {
+            "latitude": 35.591667,
+            "longitude": 139.713889
+        },
+        "no2_sensor": {
+            "sensor_id": 6587241,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1214930,
+        "station_name": "\u5927\u7530\u533a\u5343\u9ce5\uff13\u4e01\u76ee\uff13\uff0d\uff13\uff11\u5148",
+        "coordinates": {
+            "latitude": 35.573056,
+            "longitude": 139.686389
+        },
+        "no2_sensor": {
+            "sensor_id": 6519173,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1214931,
+        "station_name": "\u5927\u7530\u533a\u5357\u5343\u675f\uff11\uff0d\uff13\uff13\uff0d\uff11",
+        "coordinates": {
+            "latitude": 35.597222,
+            "longitude": 139.697222
+        },
+        "no2_sensor": {
+            "sensor_id": 6519744,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215290,
+        "station_name": "\u6587\u4eac\u533a\u5927\u585a\uff13\uff0d\uff15\uff0d\uff11",
+        "coordinates": {
+            "latitude": 35.719444,
+            "longitude": 139.734722
+        },
+        "no2_sensor": {
+            "sensor_id": 6587168,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215291,
+        "station_name": "\u6587\u4eac\u533a\u672c\u99d2\u8fbc\u56db\u4e01\u76ee35\u756a15\u53f7",
+        "coordinates": {
+            "latitude": 35.730556,
+            "longitude": 139.758333
+        },
+        "no2_sensor": {
+            "sensor_id": 6520815,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215294,
+        "station_name": "\u65b0\u5bbf\u533a\u4e0b\u843d\u5408\u4e8c\u4e01\u76ee\uff12\u756a\u5730\u5148",
+        "coordinates": {
+            "latitude": 35.713889,
+            "longitude": 139.705556
+        },
+        "no2_sensor": {
+            "sensor_id": 6518335,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215295,
+        "station_name": "\u65b0\u5bbf\u533a\u5185\u85e4\u753a\uff11\uff11",
+        "coordinates": {
+            "latitude": 35.677777999999996,
+            "longitude": 139.716667
+        },
+        "no2_sensor": {
+            "sensor_id": 6520345,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215373,
+        "station_name": "\u6749\u4e26\u533a\u4e45\u6211\u5c71\uff15\uff0d\uff13\uff16\uff0d\uff11\uff17",
+        "coordinates": {
+            "latitude": 35.686111,
+            "longitude": 139.605556
+        },
+        "no2_sensor": {
+            "sensor_id": 6518084,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215412,
+        "station_name": "\u677f\u6a4b\u533a\u5927\u548c\u753a\uff11\uff14\uff0d\uff11\uff12",
+        "coordinates": {
+            "latitude": 35.758333,
+            "longitude": 139.708333
+        },
+        "no2_sensor": {
+            "sensor_id": 6587276,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215413,
+        "station_name": "\u677f\u6a4b\u533a\u6c37\u5ddd\u753a\uff11\uff13\uff0d\uff11",
+        "coordinates": {
+            "latitude": 35.753611,
+            "longitude": 139.7075
+        },
+        "no2_sensor": {
+            "sensor_id": 6587196,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215489,
+        "station_name": "\u6c5f\u6771\u533a\u4e80\u6238\uff17\uff0d\uff14\uff12",
+        "coordinates": {
+            "latitude": 35.694444,
+            "longitude": 139.838889
+        },
+        "no2_sensor": {
+            "sensor_id": 6587322,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215490,
+        "station_name": "\u6c5f\u6771\u533a\u5927\u5cf6\uff13\uff0d\uff11\uff0d\uff13",
+        "coordinates": {
+            "latitude": 35.686111,
+            "longitude": 139.830556
+        },
+        "no2_sensor": {
+            "sensor_id": 6587181,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215491,
+        "station_name": "\u6c5f\u6771\u533a\u8fb0\u5df3\u4e00\u4e01\u76ee\uff19\u756a\u5730\u5148",
+        "coordinates": {
+            "latitude": 35.647222,
+            "longitude": 139.813889
+        },
+        "no2_sensor": {
+            "sensor_id": 6520578,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215540,
+        "station_name": "\u6e0b\u8c37\u533a\u5b87\u7530\u5ddd\u753a\uff11\uff0d\uff11",
+        "coordinates": {
+            "latitude": 35.661111,
+            "longitude": 139.702778
+        },
+        "no2_sensor": {
+            "sensor_id": 6515603,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215541,
+        "station_name": "\u6e0b\u8c37\u533a\u7b39\u585a\uff11\uff0d\uff16\uff14\uff0d\uff11\uff19",
+        "coordinates": {
+            "latitude": 35.669444,
+            "longitude": 139.663889
+        },
+        "no2_sensor": {
+            "sensor_id": 6519859,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215542,
+        "station_name": "\u6e2f\u533a\u53f0\u5834\uff11\uff0d\uff13\uff0d\uff11",
+        "coordinates": {
+            "latitude": 35.630556,
+            "longitude": 139.780556
+        },
+        "no2_sensor": {
+            "sensor_id": 6515515,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215543,
+        "station_name": "\u6e2f\u533a\u9ad8\u8f2a\uff12\uff0d\uff12\uff10",
+        "coordinates": {
+            "latitude": 35.633333,
+            "longitude": 139.741667
+        },
+        "no2_sensor": {
+            "sensor_id": 6518967,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215544,
+        "station_name": "\u6e2f\u533a\u9ad8\u8f2a\u4e00\u4e01\u76ee6\u756a",
+        "coordinates": {
+            "latitude": 35.642222,
+            "longitude": 139.735833
+        },
+        "no2_sensor": {
+            "sensor_id": 6519804,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215604,
+        "station_name": "\u76ee\u9ed2\u533a\u67ff\u306e\u6728\u5742\uff11\uff0d\uff11\uff0d\uff14",
+        "coordinates": {
+            "latitude": 35.620278,
+            "longitude": 139.681667
+        },
+        "no2_sensor": {
+            "sensor_id": 6515512,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215605,
+        "station_name": "\u76ee\u9ed2\u533a\u7891\u6587\u8c37\uff14\uff0d\uff11\uff19\uff0d\uff12\uff15",
+        "coordinates": {
+            "latitude": 35.616667,
+            "longitude": 139.686111
+        },
+        "no2_sensor": {
+            "sensor_id": 6587166,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215606,
+        "station_name": "\u76ee\u9ed2\u533a\u9752\u8449\u53f0\uff13\uff0d\uff16",
+        "coordinates": {
+            "latitude": 35.65,
+            "longitude": 139.691667
+        },
+        "no2_sensor": {
+            "sensor_id": 6518338,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215737,
+        "station_name": "\u7df4\u99ac\u533a\u5317\u753a\uff11\uff0d\uff11\uff14\uff0d\uff11\uff11",
+        "coordinates": {
+            "latitude": 35.761111,
+            "longitude": 139.666667
+        },
+        "no2_sensor": {
+            "sensor_id": 6519084,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215738,
+        "station_name": "\u7df4\u99ac\u533a\u77f3\u795e\u4e95\u753a\uff15\uff0d\uff12\uff14\u5730\u5148",
+        "coordinates": {
+            "latitude": 35.733333,
+            "longitude": 139.602778
+        },
+        "no2_sensor": {
+            "sensor_id": 6587252,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215739,
+        "station_name": "\u7df4\u99ac\u533a\u7df4\u99ac\uff12\uff0d\uff12\uff17\uff0d\uff12\uff18",
+        "coordinates": {
+            "latitude": 35.743333,
+            "longitude": 139.653611
+        },
+        "no2_sensor": {
+            "sensor_id": 6516899,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215784,
+        "station_name": "\u8352\u5ddd\u533a\u5357\u5343\u4f4f\uff11\uff0d\uff14\uff0d\uff11\uff11",
+        "coordinates": {
+            "latitude": 35.730556,
+            "longitude": 139.791667
+        },
+        "no2_sensor": {
+            "sensor_id": 6516949,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215848,
+        "station_name": "\u8c4a\u5cf6\u533a\u897f\u5de3\u9d28\uff12\uff0d\uff13\uff19\uff0d\uff15",
+        "coordinates": {
+            "latitude": 35.738611,
+            "longitude": 139.729444
+        },
+        "no2_sensor": {
+            "sensor_id": 6587251,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215878,
+        "station_name": "\u8db3\u7acb\u533a\u4e2d\u592e\u672c\u753a\uff11\uff0d\uff11\uff17",
+        "coordinates": {
+            "latitude": 35.772222,
+            "longitude": 139.805556
+        },
+        "no2_sensor": {
+            "sensor_id": 6520231,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1215880,
+        "station_name": "\u8db3\u7acb\u533a\u897f\u65b0\u4e95\uff16\uff0d\uff12\uff11\uff0d\uff13",
+        "coordinates": {
+            "latitude": 35.777778,
+            "longitude": 139.780556
+        },
+        "no2_sensor": {
+            "sensor_id": 6517103,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    },
+    {
+        "station_id": 1298213,
+        "station_name": "\u65b0\u5bbf\u533a\u5185\u85e4\u753a\uff11\uff11",
+        "coordinates": {
+            "latitude": 35.681389,
+            "longitude": 139.718611
+        },
+        "no2_sensor": {
+            "sensor_id": 6587300,
+            "name": "no2 ppm",
+            "parameter": {
+                "id": 7,
+                "name": "no2",
+                "units": "ppm",
+                "displayName": "NO\u2082"
+            }
+        }
+    }
+]
