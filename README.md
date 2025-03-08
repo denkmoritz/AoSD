@@ -38,7 +38,7 @@ If you prefer to run the project without Docker, follow these steps:
    ```
 4. Start the backend server:
    ```sh
-   uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload
+   uvicorn main:app --host 0.0.0.0 --port 8000 --reload
    ```
 
 #### Frontend Setup
