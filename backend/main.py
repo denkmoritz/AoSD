@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
 import joblib
+import os
 import keras
 import datetime
 import pytz
@@ -9,33 +10,20 @@ import time
 import threading
 import geopandas as gpd
 from shapely.geometry import Point
-import sys
-import os
-
-# ✅ Ensure the `backend/` folder is in the Python path
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from scripts.kriging import load_tokyo_special_wards, perform_all_kriging
 from scripts.live_fetch import fetch_all_data
 
-# ✅ Define Paths
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # Get the backend base directory
-DATA_DIR = os.path.join(BASE_DIR, "data")
-MODEL_DIR = os.path.join(BASE_DIR, "models")
-LIVE_DATA_PATH = os.path.join(DATA_DIR, "live_no2_weather_data.csv")
 
+
+LIVE_DATA_PATH = "data/live_no2_weather_data.csv"
 
 app = FastAPI()
 
-origins = [
-    "http://localhost:3000",
-    "http://frontend:3000",
-    "http://127.0.0.1:3000",
-]
-
+# ✅ Allow CORS for frontend requests
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,  # Don't use "*" if allow_credentials=True
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -48,8 +36,8 @@ tokyo_gdf = load_tokyo_special_wards()
 # ✅ Load ML model & scaler with error handling
 try:
     print("📡 Loading ML model and scaler...")
-    scaler = joblib.load(os.path.join(DATA_DIR, "scaler.pkl"))
-    model = keras.models.load_model(os.path.join(MODEL_DIR, "no2_forecast_model.keras"))
+    scaler = joblib.load("data/scaler.pkl")
+    model = keras.models.load_model("models/no2_forecast_model.keras")
     print("✅ ML Model and Scaler Loaded.")
 except Exception as e:
     print(f"❌ Error loading ML model or scaler: {e}")

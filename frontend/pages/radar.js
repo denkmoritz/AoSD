@@ -4,6 +4,8 @@ import { useRouter } from 'next/router';
 import "leaflet/dist/leaflet.css";
 import axios from "axios";
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+
 // Dynamically import MapContainer and TileLayer with SSR disabled
 const MapContainer = dynamic(
     () => import("react-leaflet").then((mod) => mod.MapContainer),
@@ -74,46 +76,50 @@ const PollutionRadar = () => {
         };
     }, []);
 
-    // ✅ Fetch NO₂ Data
     const fetchLiveData = async () => {
         try {
             console.log("🔄 Fetching Live NO₂ Data...");
-            const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-            const response = await axios.get(`${apiUrl}/pollution/live`);
-
-
+    
+            // ✅ Ensure response is assigned before using it
+            const response = await axios.get(`${API_BASE_URL}/pollution/live`);
+    
+            if (!response || !response.data) {
+                throw new Error("Invalid response from the API.");
+            }
+    
             if (response.data.status === "processing") {
                 console.warn("⚠ Data is still processing. Try again later.");
                 return;
             }
-
+    
             dataRef.current = response.data;
             const newTimestamps = Object.keys(response.data);
             setTimestamps(newTimestamps);
-
-            const timestampsResponse = await axios.get(`${apiUrl}/pollution/timestamps`);
-            if (timestampsResponse.data.timestamps) {
+    
+            // ✅ Ensure timestamps are fetched correctly
+            const timestampsResponse = await axios.get(`${API_BASE_URL}/pollution/timestamps`);
+            if (timestampsResponse.data && timestampsResponse.data.timestamps) {
                 setFormattedTimestamps(timestampsResponse.data.timestamps);
             }
-
+    
             let maxPollution = 0;
             newTimestamps.forEach(ts => {
                 const values = response.data[ts].map(d => d[2]);
                 maxPollution = Math.max(maxPollution, ...values);
             });
-
+    
             setMaxIntensity(maxPollution);
-
+    
             if (newTimestamps.length > 0) {
                 setCurrentTimestamp(timestampsResponse.data.timestamps[0]);
                 setPollutionData(response.data[newTimestamps[0]] || []);
             }
-
+    
             console.log("✅ Live Data Updated:", response.data);
         } catch (error) {
             console.error("❌ Error fetching live pollution data:", error.message);
         }
-    };
+    };    
 
     useEffect(() => {
         fetchLiveData();

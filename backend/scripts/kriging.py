@@ -4,12 +4,6 @@ import geopandas as gpd
 from shapely.geometry import Point
 from pykrige.ok import OrdinaryKriging
 from pyproj import Transformer
-import os
-
-# ✅ Define BASE_DIR dynamically for Docker compatibility
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # Points to `backend`
-DATA_DIR = os.path.join(BASE_DIR, "data")  # Absolute path to `data/`
-MODELS_DIR = os.path.join(BASE_DIR, "models")  # Absolute path to `models/`
 
 # ✅ Define CRS
 UTM_ZONE = "EPSG:32654"  # Tokyo UTM Zone
@@ -25,30 +19,23 @@ def transform_utm_to_geographic(points):
 
 
 # ✅ Load Tokyo boundary data in UTM
-def load_tokyo_special_wards(filepath=os.path.join(DATA_DIR, "tokyo_special_ward_topo.json")):
-    if not os.path.exists(filepath):
-        raise FileNotFoundError(f"❌ Error: Tokyo special wards file '{filepath}' not found!")
-
+def load_tokyo_special_wards(filepath="data/tokyo_special_ward_topo.json"):
     special_wards_gdf = gpd.read_file(filepath)
     if special_wards_gdf.crs is None:
         special_wards_gdf.set_crs(epsg=4326, inplace=True)
-    
     return special_wards_gdf.to_crs(UTM_ZONE)  # ✅ Keep in UTM
 
 
 # ✅ Load live NO₂ predictions in UTM
-def load_live_predictions(filepath=os.path.join(DATA_DIR, "live_predictions.csv")):
-    if not os.path.exists(filepath):
-        raise FileNotFoundError(f"❌ Error: Live predictions file '{filepath}' not found!")
-
+def load_live_predictions(filepath="data/live_predictions.csv"):
     df = pd.read_csv(filepath)
     gdf = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df.longitude, df.latitude), crs=GEOGRAPHIC_CRS)
-    
     return gdf.to_crs(UTM_ZONE)  # ✅ Convert to UTM only once
 
 
 def perform_all_kriging(sensor_df, tokyo_gdf):
     """Performs Kriging for NO₂ concentration in UTM coordinates, then converts to lat/lon."""
+
     best_variogram = "gaussian"
     best_range = 10000
     best_nugget = 1
@@ -63,8 +50,10 @@ def perform_all_kriging(sensor_df, tokyo_gdf):
     interpolations = {}
 
     for column in ["NO2_t", "NO2_T+1", "NO2_T+2", "NO2_T+3", "NO2_T+4"]:
+        # ✅ Ensure sensor data remains in UTM
         sensor_gdf = sensor_df.copy()
 
+        # ✅ Extract UTM X, Y, and NO₂ values
         sensor_x = sensor_gdf.geometry.x.values  # UTM X
         sensor_y = sensor_gdf.geometry.y.values  # UTM Y
         sensor_values = sensor_df[column].values  # NO₂ Concentrations
@@ -79,7 +68,7 @@ def perform_all_kriging(sensor_df, tokyo_gdf):
 
         z_kriged, _ = OK.execute("grid", grid_x, grid_y)
 
-        # ✅ Store interpolated results inside Tokyo
+        # ✅ Store interpolated results where inside Tokyo boundary
         heatmap_data = []
         utm_points = []
 

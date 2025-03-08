@@ -1,0 +1,31 @@
+# Use Python 3.11 slim as a lightweight base image
+FROM python:3.11
+
+# Set the working directory inside the container to backend
+WORKDIR /app/backend
+
+# Copy only requirements first (for better caching)
+COPY backend/requirements.txt .
+
+# Install dependencies inside a virtual environment
+RUN python -m venv /app/venv && \
+    /app/venv/bin/pip install --no-cache-dir -r requirements.txt
+
+# Copy the entire backend directory
+COPY backend /app/backend
+
+# ✅ Ensure data and models directories are explicitly copied
+COPY backend/data /app/backend/data
+COPY backend/models /app/backend/models
+
+# Set environment variables
+ENV PYTHONPATH="/app/backend"
+ENV PATH="/app/venv/bin:$PATH"
+ENV ENV=development
+ENV HOST=0.0.0.0
+
+# Expose FastAPI's default port
+EXPOSE 8000
+
+# ✅ Start FastAPI with `.` so it finds `main.py` correctly
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]

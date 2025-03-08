@@ -12,3 +12,4 @@ Requests==2.32.3
 Shapely==2.0.7
 uvicorn
 tensorflow
+scikit-learn

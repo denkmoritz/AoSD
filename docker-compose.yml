@@ -2,39 +2,39 @@ services:
   backend:
     build:
       context: .
-      dockerfile: Dockerfile.backend
+      dockerfile: backend/Dockerfile.backend
     ports:
       - "8000:8000"
     volumes:
-      - ./backend:/app/backend  # ✅ Ensures backend files are correctly mapped
-      - ./backend/data:/app/backend/data  # ✅ Persist `data/` directory
+      - ./backend/data:/app/backend/data  # Persist `data/` directory
+      - ./backend/models:/app/backend/models  # Persist `models/` directory
     environment:
       - ENV=development
       - HOST=0.0.0.0
       - PYTHONPATH=/app/backend
+      - PYTHONUNBUFFERED=1  # Ensures real-time logging
     restart: unless-stopped
     networks:
-      - aosd_network
+      - aosd_denk
 
   frontend:
     build:
       context: .
-      dockerfile: Dockerfile.frontend
+      dockerfile: frontend/Dockerfile.frontend
     ports:
       - "3000:3000"
     volumes:
-      - ./frontend:/app
-      - /app/node_modules
-    environment:
-      - NODE_ENV=development
+      - ./frontend:/app/frontend
+      - /app/frontend/node_modules
+      - /app/frontend/.next  # Ensures the build persists
     env_file:
-      - ./frontend/.env.local
+      - frontend/.env.local
     depends_on:
       - backend
     restart: unless-stopped
     networks:
-      - aosd_network
+      - aosd_denk
 
 networks:
-  aosd_network:
+  aosd_denk:
     driver: bridge
