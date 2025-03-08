@@ -1,12 +1,10 @@
 networks:
   aosd_denk:
     driver: bridge
-    
+
 services:
   backend:
-    build:
-      context: .
-      dockerfile: backend/Dockerfile.backend
+    image: moritzdenk/aosd_backend:latest  # ✅ Use Docker Hub image
     ports:
       - "8000:8000"
     volumes:
@@ -22,9 +20,7 @@ services:
       - aosd_denk
 
   frontend:
-    build:
-      context: .
-      dockerfile: frontend/Dockerfile.frontend
+    image: moritzdenk/aosd_frontend:latest  # ✅ Use Docker Hub image
     ports:
       - "3000:3000"
     volumes:
