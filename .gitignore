@@ -17,7 +17,7 @@
 *.sw?
 
 # Python virtual environment
-venv/
+backend/venv/
 env/
 *.pyc
 __pycache__/
