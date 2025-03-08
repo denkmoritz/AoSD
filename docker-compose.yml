@@ -1,3 +1,7 @@
+networks:
+  aosd_denk:
+    driver: bridge
+    
 services:
   backend:
     build:
@@ -34,7 +38,3 @@ services:
     restart: unless-stopped
     networks:
       - aosd_denk
-
-networks:
-  aosd_denk:
-    driver: bridge

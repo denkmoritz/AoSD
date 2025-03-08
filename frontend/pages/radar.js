@@ -78,7 +78,7 @@ const PollutionRadar = () => {
 
     const fetchLiveData = async () => {
         try {
-            console.log("🔄 Fetching Live NO₂ Data...");
+            console.log("🔄 API BASE URL:", JSON.stringify(API_BASE_URL));
     
             // ✅ Ensure response is assigned before using it
             const response = await axios.get(`${API_BASE_URL}/pollution/live`);
