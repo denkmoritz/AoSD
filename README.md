@@ -8,9 +8,9 @@ The system leverages machine learning techniques to analyze and predict nitrogen
 ## Features
 - Predicts NO₂ pollution levels for Tokyo
 - Full-stack application with a dedicated backend and frontend
-- Dockerized for easy deployment (not available yet)
+- Dockerized for easy deployment
 
-## Installation & Setup (not available yet)
+## Installation & Setup
 Ensure you have [Docker](https://www.docker.com/) installed on your machine. To run the project, simply execute:
 
 ```sh
@@ -61,7 +61,7 @@ Once the services are up and running, access the application via the provided fr
 ## Technologies Used
 - **Backend:** Python, FastAPI
 - **Frontend:** Next.JS
-- **Docker:** For containerized deployment (not available)
+- **Docker:** For containerized deployment
 
 ## Contributing
 Feel free to fork this repository and submit pull requests with improvements or bug fixes.
